@@ -3,36 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AESGuard</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <title>Encryption App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h1>AESGuard</h1>
-        <h3>Shield Your Messages, Unlock Security</h3>
-        <p>AESGuard is an engine for secure message encryption and decryption. <br> With cutting-edge AES-128 encryption, users can safeguard their data effortlessly. </p>
-        <br>
-        <textarea id="messageInput" placeholder="Enter a message to encrypt"></textarea>
-        <button onclick="encryptMessage()">Encrypt</button>
-        <button onclick="decryptMessage()">Decrypt</button>
-        <br>
-        <br>
-        <div id="resultContainer">
-            <!-- your encrypted message will be printed here-->
-
+<body class="bg-gray-100 min-h-screen flex flex-col justify-center items-center">
+    <div class="w-full max-w-md p-4 bg-white rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Encryption App</h1>
+        <textarea id="messageInput" class="w-full h-32 px-3 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" placeholder="Enter your message"></textarea>
+        <div id="resultContainer" class="mb-4"></div>
+        <div class="flex justify-center">
+            <button onclick="encryptMessage()" class="bg-blue-500 text-white px-4 py-2 rounded-lg mr-2">Encrypt</button>
+            <button onclick="decryptMessage()" class="bg-green-500 text-white px-4 py-2 rounded-lg">Decrypt</button>
         </div>
-          <!-- <button onclick="copyToClipboard()">Copy to Clipboard</button> -->
-        <br>
-        <br>
-        <br><br>
-        <h6>Made By Iosif Gogolos in Mutlangen Germany (c) 2024</h6>
     </div>
 
-
-     <!-- <script src="script.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script> -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
